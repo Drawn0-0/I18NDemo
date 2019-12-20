@@ -26,5 +26,5 @@ an Android library for international.
   
   ``
   
-  修改语言时，调用I18NSpUtil.setLanguage()保存设置，然后重启App即可。  
-  使用很简单，Demo里都写好了。
+ 修改语言时，调用I18NSpUtil.setLanguage()保存设置，然后重启App即可。  
+ 使用很简单，Demo里都写好了。
