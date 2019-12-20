@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">I18NDemo</string>
+    <string name="greeting">你好！</string>
+    <string name="apply">应用</string>
+    <string name="service">服务</string>
+    <string name="auto">跟随系统</string>
+    <string name="date_templet">当前时间:%1$s</string>
+    <string name="notify_title">您有一个提醒</string>
+</resources>

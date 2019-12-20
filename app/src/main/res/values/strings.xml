@@ -1,0 +1,12 @@
+<resources>
+    <string name="app_name">I18NDemo</string>
+    <string name="greeting">Hello World!</string>
+    <string name="service">Service</string>
+    <string name="auto">Auto</string>
+    <string name="chinese_simple" translatable="false">中文简体</string>
+    <string name="english" translatable="false">English</string>
+    <string name="korean" translatable="false">한국어</string>
+    <string name="apply">Apply</string>
+    <string name="date_templet">Current is: %1$s</string>
+    <string name="notify_title">Notification</string>
+</resources>

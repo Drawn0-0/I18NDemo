@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">I18NDemo</string>
+    <string name="apply">대다</string>
+    <string name="auto">자동</string>
+    <string name="service">서비스</string>
+    <string name="greeting">안녕하세요 세계!</string>
+    <string name="date_templet">흐름: %1$s</string>
+    <string name="notify_title">당신은 알림이</string>
+</resources>
