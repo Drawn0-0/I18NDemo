@@ -1,5 +1,6 @@
 apply plugin: 'com.android.library'
 apply plugin: 'com.novoda.bintray-release'
+apply from: 'config.gradle'
 
 android {
     compileSdkVersion 29
@@ -30,11 +31,3 @@ tasks.withType(Javadoc){
 dependencies {
     implementation fileTree(dir: 'libs', include: ['*.jar'])
 }
-publish {
-    userOrg = 'drawn'
-    groupId = 'com.drawnfor'
-    artifactId = 'i18nlibrary'
-    publishVersion = '1.0.0'
-    desc = 'android lib for international'
-}
-
