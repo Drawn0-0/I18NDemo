@@ -2,8 +2,8 @@
 an Android library for international.  
 
 ## 使用
-* 实现 GetLocal 接口，用于获取sp文件中保存的Local值
-* 定义你需要用到的local值，设置I18N sp文件的参数
+* 实现 GetLocal 接口，用于获取sp文件中保存的Local值。[GetLocalImpl](https://github.com/Drawn0-0/I18NDemo/blob/master/app/src/main/java/com/drawnfor/i18ndemo/GetLocalImpl.java)
+* 定义你需要用到的local值，设置I18N sp文件的参数。[Local 定义](https://github.com/Drawn0-0/I18NDemo/blob/master/app/src/main/java/com/drawnfor/i18ndemo/NonContextConstant.java)
 * 在Application，BaseActivity和BaseService中调用相应方法
   ```
     //在Application中
