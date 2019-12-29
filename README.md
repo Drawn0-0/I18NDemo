@@ -34,5 +34,5 @@ an Android library for international.
 implementation 'com.drawnfor:i18nlibrary:1.0.0'
 ```
 
-##注意
+## 注意
 如果你依赖的是androidx appcompat:1.1.0版本，那么api21至api25的设备，语言的更改将会失败。这是系统的问题，最简单的做法将appcompat改为1.0.2即可。
