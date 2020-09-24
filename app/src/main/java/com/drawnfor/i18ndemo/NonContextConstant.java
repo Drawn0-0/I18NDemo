@@ -1,7 +1,5 @@
 package com.drawnfor.i18ndemo;
 
-import com.drawnfor.i18nlibrary.I18NParam;
-
 import java.lang.annotation.Retention;
 import java.lang.annotation.RetentionPolicy;
 
@@ -16,8 +14,6 @@ public class NonContextConstant {
         int Korean = 2;
         int English = 3;
     }
-
-    public static I18NParam i18NParam = new I18NParam("I18nPreference","I18nKey");
 
     public static @Language int DEFAULT_LANGUAGE = Language.Auto;
 }

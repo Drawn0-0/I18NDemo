@@ -15,7 +15,7 @@ import com.drawnfor.i18ndemo.adapter.SingleAdapter;
 import com.drawnfor.i18ndemo.base.BaseActivity;
 import com.drawnfor.i18ndemo.bean.LanguageBean;
 import com.drawnfor.i18ndemo.service.NotifyService;
-import com.drawnfor.i18nlibrary.I18NSpUtil;
+import com.drawnfor.i18ndemo.I18NSpUtil;
 import com.drawnfor.i18nlibrary.I18NUtil;
 
 import java.util.ArrayList;
@@ -49,7 +49,7 @@ public class MainActivity extends BaseActivity implements View.OnClickListener {
     }
 
     private LanguageBean getDefaultLanguageBean() {
-        int languageCode = I18NSpUtil.getLanguage(this, NonContextConstant.i18NParam, NonContextConstant.DEFAULT_LANGUAGE);
+        int languageCode = I18NSpUtil.getLanguage(this, NonContextConstant.DEFAULT_LANGUAGE);
         switch (languageCode) {
             case NonContextConstant.Language.Chinese_Simple:
                 return new LanguageBean(languageCode, getString(R.string.chinese_simple));
@@ -78,7 +78,7 @@ public class MainActivity extends BaseActivity implements View.OnClickListener {
             case R.id.main_btn_apply:
                 LanguageBean selectBean = adapter.getSelectBean();
                 if (selectBean!=null){
-                    I18NSpUtil.setLanguage(this, NonContextConstant.i18NParam, selectBean.getCode());
+                    I18NSpUtil.setLanguage(this, selectBean.getCode());
                     restartApp();
                 }
                 break;

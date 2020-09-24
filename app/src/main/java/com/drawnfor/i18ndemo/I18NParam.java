@@ -1,4 +1,4 @@
-package com.drawnfor.i18nlibrary;
+package com.drawnfor.i18ndemo;
 
 /**
  * 国际化的Sp参数

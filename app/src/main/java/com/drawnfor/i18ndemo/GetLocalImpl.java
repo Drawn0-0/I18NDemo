@@ -2,7 +2,6 @@ package com.drawnfor.i18ndemo;
 
 import android.content.Context;
 import com.drawnfor.i18nlibrary.GetLocal;
-import com.drawnfor.i18nlibrary.I18NSpUtil;
 import com.drawnfor.i18nlibrary.I18NUtil;
 
 import java.util.Locale;
@@ -25,12 +24,12 @@ public class GetLocalImpl implements GetLocal {
     public Locale getLocal(Context context) {
         Locale locale;
 
-        switch (I18NSpUtil.getLanguage(context, NonContextConstant.i18NParam, NonContextConstant.DEFAULT_LANGUAGE)) {
+        switch (I18NSpUtil.getLanguage(context, NonContextConstant.DEFAULT_LANGUAGE)) {
             case NonContextConstant.Language.English:
                 locale = Locale.ENGLISH;
                 break;
             case NonContextConstant.Language.Korean:
-                locale = Locale.KOREAN;
+                locale = Locale.KOREA;
                 break;
             case NonContextConstant.Language.Chinese_Simple:
                 locale = Locale.SIMPLIFIED_CHINESE;

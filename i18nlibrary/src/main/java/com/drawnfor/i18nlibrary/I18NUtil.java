@@ -1,10 +1,8 @@
 package com.drawnfor.i18nlibrary;
 
-import android.annotation.TargetApi;
 import android.app.Activity;
 import android.content.Context;
 import android.content.res.Configuration;
-import android.content.res.Resources;
 import android.os.Build;
 
 import java.util.Locale;
@@ -20,6 +18,7 @@ public class I18NUtil {
     private static Locale mSysLocal;
 
     private I18NUtil() {
+        mSysLocal = Locale.getDefault();
     }
 
     public static I18NUtil getInstance() {
@@ -30,9 +29,6 @@ public class I18NUtil {
     }
 
     public Locale getSysLocal() {
-        if (mSysLocal == null) {
-            mSysLocal = Locale.getDefault();
-        }
         return mSysLocal;
     }
 
@@ -55,36 +51,17 @@ public class I18NUtil {
     }
 
     public static Context updateApplicationBaseContext(Context context, GetLocal getLocal) {
-        mSysLocal = Locale.getDefault();
-        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.N) {
-            return createNewLocalContext(context, getLocal.getLocal(context));
-        } else {
-            updateContextLocal(context, getLocal.getLocal(context));
-            return context;
-        }
+        return updateContext(context,getLocal.getLocal(context));
     }
 
     public static Context updateBaseContext(Context context, GetLocal getLocal) {
-        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.N) {
-            return createNewLocalContext(context, getLocal.getLocal(context));
-        } else {
-            updateContextLocal(context, getLocal.getLocal(context));
-            return context;
-        }
+        return updateContext(context,getLocal.getLocal(context));
     }
 
-    private static void updateContextLocal(Context context, Locale locale) {
-        Resources resources = context.getResources();
-        Configuration configuration = resources.getConfiguration();
+    private static Context updateContext(Context context, Locale locale){
+        Configuration configuration = new Configuration(context.getResources().getConfiguration());
         configuration.setLocale(locale);
-        resources.updateConfiguration(configuration, resources.getDisplayMetrics());
-    }
-
-    @TargetApi(Build.VERSION_CODES.N)
-    private static Context createNewLocalContext(Context context, Locale locale) {
-        Resources resources = context.getResources();
-        Configuration configuration = resources.getConfiguration();
-        configuration.setLocale(locale);
+        Locale.setDefault(locale);
         return context.createConfigurationContext(configuration);
     }
 
