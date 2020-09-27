@@ -37,3 +37,6 @@ implementation 'com.drawnfor:i18nlibrary:1.0.1'
 ## 效果
 ![image](https://github.com/Drawn0-0/I18NLibrary/blob/master/language_switch.gif) 
 ![image](https://github.com/Drawn0-0/I18NLibrary/blob/master/language_auto.gif)
+
+## 注意
+本库不适配androidx appcompact:1.1.0， 请使用1.0.2或者1.2.0版本的appcompact。使用1.1.0时api21-api25的设备上，语言修改将会失效。
